@@ -1,0 +1,3 @@
+/home/rasmus/thesisrepo/tflite_gpu_delegate_build/CMakeFiles/tflite_gpu_delegate.dir
+/home/rasmus/thesisrepo/tflite_gpu_delegate_build/CMakeFiles/edit_cache.dir
+/home/rasmus/thesisrepo/tflite_gpu_delegate_build/CMakeFiles/rebuild_cache.dir

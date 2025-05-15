@@ -1,0 +1,14 @@
+# Core
+flask>=3.0
+python-dotenv
+numpy
+opencv-python-headless           
+mediapipe                         
+screeninfo
+supervision
+einops
+timm
+pyyaml
+hydra-core
+iopath
+
