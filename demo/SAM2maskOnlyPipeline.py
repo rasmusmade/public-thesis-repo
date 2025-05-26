@@ -82,7 +82,7 @@ FPS OVERLAY
 TEXT_FONT = cv2.FONT_HERSHEY_SIMPLEX
 TEXT_SCALE = 1.2
 TEXT_THICKNESS = 2
-TEXT_COLOR = (255, 0, 0)  
+TEXT_COLOR = (0, 0, 255)  
 FPS_TEXT = "FPS: 99"
 FPS_TEXT_SIZE = cv2.getTextSize(FPS_TEXT, TEXT_FONT, TEXT_SCALE, TEXT_THICKNESS)[0] 
 FPS_TEXT_X = SCREEN_W - FPS_TEXT_SIZE[0] - 20  # 20 px margin from right
@@ -129,6 +129,7 @@ def _worker():
     """
     Grabs RTSP frames, runs SAM2 once per frame, publishes JPEG.
     """
+    global latestJpeg
     start_ffmpeg()
     threading.Thread(target=readFrames, daemon=True).start()
 
@@ -182,7 +183,6 @@ def _worker():
         # encode & publish
         buf = cv2.imencode(".jpg", native)[1].tobytes()
         with jpegLock:
-            global latestJpeg
             latestJpeg = buf
 
 _worker_thread = None
