@@ -1,0 +1,4 @@
+demo/.env
+demo/selfie_segmenter.tflite
+demo/sam2repo/sam2/checkpoints/*
+!demo/sam2repo/sam2/checkpoints/download_ckpts.sh
